@@ -2,7 +2,7 @@
 Tags: adsense, ads, country, block
 Requires at least: 5.3
 Tested up to: 6.2
-Requires PHP: 5.6
+Requires PHP: 7.4
 Stable tag: 1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -16,8 +16,6 @@ This is a quick and efficient solution for blocking ads from specific countries 
 * This plugin is extremely simple and easy to set up.
 * Block undesired countries from displaying ads on your website.
 * This plugin is lightweight, taking up less than 8Kbs of space compared to similar plugins that often take up hundreds of Kbs.
-
-
 
 == Installation ==
 1. You can:
