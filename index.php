@@ -54,10 +54,11 @@ function CBFA_guardar_cbfa()
     }
 
     $ajax_settings = [];
-
-    $ajax_settings["id"] = sanitize_text_field($_POST["trid"]);
-    $ajax_settings["pais"] = sanitize_text_field($_POST["toe"]);
-    $ajax_settings["api_key"] = sanitize_text_field($_POST["apikeyfor"]);
+    
+    $ajax_settings["id"] = wp_kses_post(sanitize_text_field($_POST["trid"]));
+    $ajax_settings["pais"] = wp_kses_post(sanitize_text_field($_POST["toe"]));
+    $ajax_settings["api_key"] = wp_kses_post(sanitize_text_field($_POST["apikeyfor"]));
+    
     $ajax_settings["save"] = time();
 
     update_option("cbfa_configured", "on");
