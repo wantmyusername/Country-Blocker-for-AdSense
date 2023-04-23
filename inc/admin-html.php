@@ -8,7 +8,7 @@
 		<!-- Contenido de los tabs -->
 		<div id="general" class="tabcontent" style="display: block;">
 			<form id="cbfa" autocomplete="off" method="POST">
-				<input type="hidden" name="action" value="guardar_cbfa_AJAX">
+				<input type="hidden" name="action" value="CBFA_guardar_cbfa">
 				<table class="form-table">
 					<tbody>
 						<tr>
@@ -27,7 +27,7 @@
 								</div>
 							</th>
 							<td>
-								<input name="trid" id="trid" type="text" class="regular-text" placeholder="pub-1234567890123456" value="<?php echo $settings['id'] ?>" required>
+								<input name="trid" id="trid" type="text" class="regular-text" placeholder="pub-1234567890123456" value="<?php echo esc_html( $settings['id'] ); ?>" required>
 							</td>
 						</tr>
 						<tr>
@@ -41,7 +41,7 @@
 								</div>
 							</th>
 							<td>
-								<input name="toe" id="toe" type="text" class="regular-text" value="<?php echo $settings['pais'] ?>" placeholder="US,ES,MX..." required>
+								<input name="toe" id="toe" type="text" class="regular-text" value="<?php echo esc_html( $settings['pais'] ); ?>" placeholder="US,ES,MX..." required>
 							</td>
 						</tr>
 						<tr>
@@ -55,7 +55,7 @@
 								</div>
 							</th>
 							<td>
-								<input name="apikeyfor" id="apikeyfor" type="text" min="1" class="regular-text" value="<?php echo $settings['api_key'] ?>" placeholder="Your API KEY here" required>
+								<input name="apikeyfor" id="apikeyfor" type="text" min="1" class="regular-text" value="<?php echo esc_html( $settings['api_key'] ); ?>" placeholder="Your API KEY here" required>
 							</td>
 						</tr>
 					</tbody>
