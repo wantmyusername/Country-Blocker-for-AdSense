@@ -9,7 +9,7 @@ $current_url = parse_url(home_url());
 <?php
 
 $access_key = isset( $settings['api_key'] ) ? wp_kses_post( $settings['api_key'] ) : ''; 
-$ip_address = $_SERVER['REMOTE_ADDR'];
+$ip_address = wp_kses_post( $_SERVER['REMOTE_ADDR'] );
 
 $response = wp_remote_get( "https://api.ipgeolocation.io/ipgeo?apiKey=$access_key&ip=$ip_address" );
 
