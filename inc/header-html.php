@@ -22,7 +22,7 @@ if ( is_wp_error( $response ) ) {
     $blocked_countries = explode(',', isset( $settings['pais'] ) ? wp_kses_post( $settings['pais'] ) : '' ); // Convertir la cadena de países en un array
 
     if (in_array($api->country_code2, $blocked_countries)) { // Verificar si el país está en el array de países bloqueados
-        echo '<!-- Sorry, there are no ads available in your country. Country blocked: ' . $settings['pais'] . ' -->';
+        echo '<!-- Sorry, there are no ads available in your country. Country blocked: ' . sanitize_text_field($settings['pais']) . ' -->';
     } else {
         echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-' . esc_html( $settings['id'] ) . '" crossorigin="anonymous"></script>';
     }
